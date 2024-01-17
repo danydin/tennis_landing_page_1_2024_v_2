@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="sidebar">
+        <i id="sideIcon" class="fa-solid fa-wheelchair"></i>
+        <div id="hiddeSidebar" class="contents" >
+          <i id="crossIcon" class="fa-solid fa-xmark"></i>
+          <ul>
+            <li >הפעל ניווט מקלדת<i class="fa-solid fa-eye"></i></li>
+            <li id="zoomButton">הגדל פונטים<i class="fa-solid fa-plus"></i></li>
+            <li id="fontButton">שנה לפונט קריא יותר<i class="fa-solid fa-a"></i></li>
+            <li id="bwButton">מצב שחור לבן<i class="fa-regular fa-lightbulb"></i></li>
+            <li id="changeColorBtn">הדגשת קישורים<i class="fa-solid fa-link"></i></li>
+            <li id="backColorChange">היפוך צבעים<i class="fa-solid fa-circle-half-stroke"></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div  id="section1" class="top">
+        <img id="logo" src="./images/logo.png" alt="" width="100px" height="100px" />
+        <h1>?רוצים להיות אלופים</h1>
+      </div>
+      <div id="section2" class="midSection">
+        <div class="left" id="midLeft">
+          <div class="letf-contents">
+            <div class="mobTop">
+              <div class="leftTop">
+                <h2>מתנה</h2>
+                <p id="mobHide" style="font-size: 32px">!לכל נרשם/ת</p>
+                <p id="mobYellow" style="font-size: 20px">מחבט + תיק + חולצה</p>
+                <p style="text-align: center">המבצע עד גמר המלאי*</p>
+              </div>
+              <p id="mobTopP">החלה ההרשמה
+                לבית הספר 
+                המקצועי לטניס</p>
+            </div>
+            <form action="thanks.html" method="post" onsubmit="validateForm()">
+              <div class="card">
+                <p>:מספר המקומות מוגבל, הקדימו והירשמו</p>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="שם מלא"
+                  dir="rtl"
+                  required
+                />
+                <hr id="inputHr" />
+                <input
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  pattern="^05\d{8}$"
+                  placeholder="מספר טלפון"
+                  dir="rtl"
+                  required
+                />
+                <hr id="inputHr" />
+                <select
+                  placeholder="בחירת מרכז"
+                  id="center"
+                  required
+                  name="select"
+                  dir="rtl"
+                >
+                  <option value="" disabled selected>בחירת מרכז</option>
+                  <option>אופקים</option>
+                  <option>אשקלון</option>
+                  <option>באר שבע</option>
+                  <option>בוקעאתא</option>
+                  <option>גליל סאג'ור</option>
+                  <option>דימונה</option>
+                  <option>חיפה</option>
+                  <option>חצור הגלילית</option>
+                  <option>טייבה</option>
+                  <option>טבריה</option>
+                  <option>יפו</option>
+                  <option>יקנעם</option>
+                  <option>ירושלים</option>
+                  <option>מגדל העמק</option>
+                  <option>מסעדה</option>
+                  <option>נהריה</option>
+                  <option>עכו</option>
+                  <option>ערד</option>
+                  <option>קרית אונו</option>
+                  <option>קרית שמונה</option>
+                  <option>רמת השרון</option>
+                  <option>תל אביב</option>
+                </select>
+                <hr id="inputHr" />
+                <button type="submit">שליחה</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="right" id="midRight">
+          <p>
+            החלה ההרשמה לבית הספר המקצועי לטניס
+            אימוני טניס לילדים בכל הרמות, בהדרכת המאמנים
+            הטובים בישראל. לגילאי 4-18
+          </p>
+          <div class="child-image">
+            <img src="./images/landingpage.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div id="section3" class="footer">
+        <div id="changeBg" class="footer-left">
+          <img src="./images/logo.png" alt="" width="100px" height="100px" />
+          <div class="fLRight" id="section4">
+            <div class="fLTop">
+              <p>מרכז הטניס והחינוך בישראל</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="16"
+                width="16"
+                viewBox="0 0 512 512"
+              >
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0"
+                  fill="white"
+                />
+                <!-- Change the fill color here -->
+              </svg>
+            </div>
+            <div class="fLbott">
+              <p>www.tennis.org.il</p>
+              |
+              <p>*6227</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="large-vertical-line hidde"></div>
+
+        <div class="footer-mobile">
+          <div class="fMid">
+            <p>מרכז: רמת השרון | תל אביב | יפו | קרית אונו | ירושלים | טייבה</p>
+            <p>
+              צפון: חיפה | קרית שמונה | טבריה | עכו | יקנעם | גליל סאג'ור |
+              נהריה | קרית אתא | חצור הגלילית | מגדל העמק
+            </p>
+            <p>דרום: באר שבע | אשקלון | אופקים | ערד | דימונה</p>
+          </div>
+
+          <div class="large-vertical-line"></div>
+
+          <div class="fRight">
+            <p>מרכזי הטניס</p>
+            <p>והחינוך שלנו</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var center = document.getElementById("center").value;
+
+      if (name === "") {
+        alert("Please enter your full name");
+        return false;
+      }
+
+      if (phone === "" || !phone.match(/[0-9]{9,15}/)) {
+        alert("Please enter a valid phone number");
+        return false;
+      }
+
+      if (center === "") {
+        alert("Please select a center");
+        return false;
+      }
+
+      // Additional validation logic can be added as needed
+
+      // If all validations pass, you can submit the form
+      alert("Form submitted successfully!");
+    }
+
+
+
+    // sending api request 
+    function submitForm() {
+            // Get form data
+            var formData = new FormData(document.getElementById('myForm'));
+
+            // Send POST request using fetch
+            fetch('ajax-contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Handle success response
+                console.log(data);
+                // You can perform additional actions here if needed
+            })
+            .catch(error => {
+                // Handle errors
+                console.error('There was a problem with the fetch operation:', error);
+            });
+        }
+  </script>
+</html>

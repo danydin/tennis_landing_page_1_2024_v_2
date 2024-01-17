@@ -1,0 +1,435 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: 'YourFontName';
+    src: url('./fonts/FbSpoiler-Black.otf') format('otf'),
+         /* url('fonts/your-font-file.woff') format('woff'); */
+    /* Add more file formats if necessary */
+}
+
+
+  body,html {
+    font-family: 'FbSpoiler-Black', sans-serif;
+    width: 100%;
+    background: url('./images/sky.jpg') no-repeat center center fixed;
+    /* Set background size to cover the entire body */
+    overflow-x: hidden;
+    background-size: cover;
+    /* Set background attachment to fixed for a fixed background */
+    background-attachment: fixed;
+    /* Add additional styles as needed */
+    border: 7px solid white;
+
+    filter: grayscale(0); /* Set default value */
+  }
+  body.grayscale {
+    filter: grayscale(100%);
+}
+
+
+  .container {
+    color: white;
+  }
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .top img{
+      display: none;
+  }
+  .top h1 {
+    font-size: 90px;
+    color: white;
+  }
+  .midSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    column-gap: 10px;
+
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1;
+    margin-bottom: 5px;
+  }
+  .right p{
+      text-align: right;
+      padding-right: 70px;
+  }
+  .left {
+    flex: 1;
+    margin-bottom: 60px;
+  }
+  .letf-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .letf-contents h2{
+      color: #0b3eb8;
+      font-size: 80px ;
+      margin-bottom: -20px;
+  }
+  .leftTop{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      
+  }
+  #crossIcon:hover{
+    cursor: pointer;
+  }
+  ul li:hover{
+    cursor: pointer;
+  }
+  #sideIcon:hover{
+    cursor: pointer;
+  }
+  .right p {
+    font-size: 30px;
+    padding-left: 10px;
+  }
+  
+  .child-image img {
+    width: 100%;
+    height: 100%;
+  }
+  .container hr {
+    color: white;
+    height: 10px;
+    background-color: white;
+    border: none;
+    width: 100%;
+    margin-top: -15px;
+  }
+  .bg-color {
+    background-color: #fd7e14;
+  }
+  .bg-color2{
+    background-color: #343a40;
+  }
+  
+  .footer {
+    background-color: rgb(78, 163, 78);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+  }
+  .footer-left img{
+    margin-top: -60px;
+  }
+  .footer-left {
+    display: flex;
+
+    align-items: center;
+    column-gap: 40px;
+  }
+  .fLTop {
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+    margin-bottom: 6px;
+  }
+  .fLRight {
+  }
+  .fLbott {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+  }
+  .fLbott p:last-child{
+    font-weight: 600;
+  }
+  .fLbott p:last-child:hover{
+    color: rgb(149, 215, 149);
+  }
+  .large-vertical-line {
+    width: 2px; /* Adjust the width of the line */
+    height: 60px; /* Adjust the height of the line */
+    background-color: white; /* Set the color of the line */
+    margin: 0px 10px;
+  }
+  .small-vertical-line {
+    width: 1px; /* Adjust the width of the line */
+    height: 15px; /* Adjust the height of the line */
+    background-color: white; /* Set the color of the line */
+  }
+  .fMid {
+  }
+  .fMid p {
+    text-align: right;
+  }
+  .fRight{
+  }
+  .fRight p {
+    font-weight: bold;
+  }
+  .card {
+    max-width: 600px;
+    background: rgba( 255, 255, 255, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    margin-top: 20px;
+    row-gap: 15px;
+  }
+  
+  
+  .card input{
+      width: 100%;
+      /* height: fit-content; */
+  
+  }
+  .left .card p {
+      color: #0b3eb8;
+    font-size: 16px;
+    text-align: center;
+  
+  }
+  .card input{
+      border: none;
+      background: transparent;
+      outline: none;
+  }
+  input::placeholder{
+      color: #0b3eb8;
+  }
+  .card button{
+      background-color: #0b3eb8;
+      color: white;
+      border: none;
+      font-size: 20px;
+      padding: 6px 0;
+      margin-top: 15px;
+  }
+  button:hover{
+    cursor: pointer;
+  }
+  select{
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #0b3eb8;
+  }
+  option{
+    color: black;
+  }
+  select:hover{
+    cursor: pointer;
+  }
+  #inputHr{
+      height: 1px;
+      margin-top: -10px;
+  
+  }
+  #mobTopP{
+      display: none;
+  }
+  .footer-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  
+  #sideIcon{
+    position: absolute;
+    right: -40px;
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    color: white;
+    padding: 5px;
+    font-size: 30px;
+    transition: left 0.3s ease-in-out;
+  }
+#crossIcon{
+  font-size: 30px;
+}
+
+.sidebar{
+  color: black;
+  position: absolute;
+  top: 20%;
+  font-size: 45px;
+  z-index: 2;
+  background-color: rgb(249 245 245);
+  /* padding: 10px 30px; */
+  width:300px;
+
+  
+}
+.sidebar ul li{
+  list-style: none;
+  padding: 5px;
+  margin: 5px;
+  background-color: white;
+  font-size: 16px;
+  display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+}
+.sidebar ul li:hover{
+ background-color: rgb(193, 191, 191);
+ color: white;
+}
+.contents{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  transition: left 0.3s ease-in-out;
+
+}
+
+
+
+  
+  @media  ( max-width: 800px){
+      .footer-left img{
+          display: none;
+      }
+      .footer{
+        flex-direction: column-reverse;
+        justify-content: center;
+        row-gap: 10px;
+       
+      }
+      .hidde{
+        display: none;
+      }
+      .left {
+        margin-bottom: 0px;
+      }
+      .right {
+        margin-bottom: 0px;
+      }
+      .top {
+          display: flex;
+          flex-direction: column;
+          margin-top: 5px;
+          justify-content: center;
+          align-items: center;
+        }
+        .top img{
+          display: flex;
+        }
+        .top h1{
+          text-align: center;
+          padding: 0px 10px;
+          font-size: 40px;
+        }
+  
+        .leftTop{
+          background-color:#0b3eb8;
+          padding: 21px 10px;
+          border-radius: 50%;
+          border: 4px solid #00a1e3;
+          transform: rotate(-20deg);
+          z-index: 1;
+          
+      }
+      .leftTop h2{
+          color: white;
+          font-size: 23px;
+      }
+      .leftTop p:nth-child(2){
+        color: #fedc01;
+      }
+      .right p{
+          display: none;
+      }
+      .midSection{
+          flex-direction: column;
+      }
+      .card{
+          width: 100vw;
+          margin-top: -50px;
+          z-index: -11;
+          padding-top: 60px;
+      }
+      .leftTop p:last-child{
+        font-size: 7px;
+      }
+      .letf-contents{
+          width: 100%;
+      }
+      .left{
+          width: 100%;
+          
+      }
+      .mobTop{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 40px;
+      }
+      #mobTopP{
+          display: block;
+      }
+      #mobHide{
+        display: none;
+      }
+      #mobYellow{
+        color:#fedc01;
+        white-space: nowrap;
+        font-weight: 600;
+        font-size: 8px !important;
+        margin-top: 16px;
+      }
+      button{
+        border-radius: 15px;
+      }
+      .card input{
+        width: 100%;
+      }
+      #logo{
+        width: 50px;
+        height: 50px;
+
+      }
+      .fLRight{
+        font-size: 7px;
+      }
+      .footer-mobile{
+            font-size: 10px;
+      }
+      .child-image{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+      }
+      .child-image img{
+        width: 75%;
+      }
+  }
+  
+  @media (max-width: 535px){
+      #mobTopP{
+        margin-bottom: 68px;
+      }
+      .top h1{
+        text-align: center;
+        padding: 0px 10px;
+        font-size: 30px;
+      }
+  }
+
+
+      
