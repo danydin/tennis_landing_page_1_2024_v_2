@@ -48,21 +48,17 @@
   body.grayscale {
     filter: grayscale(100%);
 }
-
-
   .container {
     color: white;
   }
-  .top {
+  .main-title {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .top img{
-      display: none;
-  }
-  .top h1 {
+
+  .main-title h1 {
     font-size: 11vw;
     color: white;
     font-family: FbSpoiler-Black;
@@ -165,14 +161,16 @@
     justify-content: space-between;
     padding: 10px 25px;
   }
-  .footer-left img{
-    margin-top: -45px;
-  }
+
   .footer-left {
     display: flex;
     align-items: center;
     column-gap: 40px;
   }
+  .footer-left img{
+    margin-top: -45px;
+  }
+
   .fContact{
     font-family: 'FbSpoiler-Bold';
   }
@@ -217,7 +215,6 @@
 }
 
 .footer-contact__soc {
-  font-size: .9em;
   font-weight: 500;
   color: #fff;
   display: flex;
@@ -305,10 +302,8 @@
       margin-top: -10px;
   
   }
-  #mobTopP{
-      display: none;
-  }
-  .footer-centers-mobile{
+
+  .footer-centers{
     display: flex;
     align-items: center;
   }
@@ -389,7 +384,15 @@
   color: inherit;
 }
 
-@media screen and ( min-width: 800px) {
+@media only screen and ( min-width: 800px) {
+  .logo-top-mobile{
+    display: none;
+  }
+
+  .subtitle-mobile{
+    display: none;
+}
+
   .f-fb {
     display: flex;
     align-items: center;
@@ -406,7 +409,17 @@
   }
 }
 
-  @media  ( max-width: 800px){
+  @media only screen and ( max-width: 800px){
+    #mobile-logo{
+      width: 70px;
+      height: 70px;
+
+    }
+
+    .large-vertical-line.desktop{
+      display: none;
+    }
+
       .footer-left img{
           display: none;
       }
@@ -415,26 +428,23 @@
         row-gap: 10px;
        
       }
-      .hidde{
-        display: none;
-      }
       .left {
         margin-bottom: 0px;
       }
       .right {
         margin-bottom: 0px;
       }
-      .top {
+      .logo-top-mobile {
           display: flex;
           flex-direction: column;
-          margin-top: 5px;
+          margin-top: 3%;
           justify-content: center;
           align-items: center;
         }
-        .top img{
+        .main-title img{
           display: flex;
         }
-        .top h1{
+        .main-title h1{
           text-align: center;
           padding: 0px 10px;
           /* font-size: 40px; */
@@ -481,14 +491,13 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          column-gap: 40px;
+          z-index: 2;
       }
-      #mobTopP{
-          display: block;
+      .subtitle-mobile{
           color: var(--primary-color);
-          font-size: 2rem;
+          font-size: 1.5em;
           font-family: FbSpoiler-bold;
-          text-align: end;
+          margin: 2em 0;
       }
       #mobHide{
         display: none;
@@ -506,15 +515,10 @@
       .card input{
         width: 100%;
       }
-      #logo{
-        width: 70px;
-        height: 70px;
-
-      }
       .fContact{
         display: flex;
         align-items: center;
-        font-size: 7px;
+        font-size: 10px;
         gap: 0.9rem;
         justify-content: space-between;
       }
@@ -533,7 +537,7 @@
       .f-url-phone-desktop{
         display: none;
       }
-      .footer-centers-mobile{
+      .footer-centers{
         font-size: 10px;
       }
       .child-image{
@@ -549,19 +553,13 @@
     }
 
 
-  @media (max-width: 535px){
-      #mobTopP{
-          /* margin-bottom: 60px; */
-          margin: 24px 0px;
+  @media only screen and (max-width: 535px){
+      .subtitle-mobile{
+          /* margin: 24px 0px; */
           
       }
-      .top h1{
+      .main-title h1{
         font-size: 55px;
-      }
-      .mobTop{
-        column-gap: 10px;
-      }
-      .top h1{
         text-align: center;
         padding: 0px 10px;
         /* font-size: 30px; */
@@ -575,13 +573,13 @@
   }
 
   @media(max-width: 475px){
-    #mobTopP{
-      margin-right: -37px;
+    .subtitle-mobile{
+      /* margin-right: -37px; */
     }
   }
   @media(max-width: 440px){
-    #mobTopP{
-      margin: 40px -13px;
+   .subtitle-mobile{
+      /* margin: 40px -13px; */
     }
   }
   

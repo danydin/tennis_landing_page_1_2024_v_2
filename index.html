@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&display=swap" rel="stylesheet"> -->
 </head>
-  <body>
+  <body dir="">
     <div class="container">
 
       <div class="sidebar">
@@ -34,21 +34,23 @@
         </div>
       </div>
 
-      <div dir="rtl" id="section1" class="top">
-        <img id="logo" src="./images/logo.png" alt="" width="100px" height="100px" />
+      <div class="logo-top-mobile">
+        <img id="mobile-logo" src="./images/logo.png" alt="לוגו מרכזי הטניס והחינוך בישראל" />
+      </div>
+      <div dir="rtl" id="section1" class="main-title">
         <h1>רוצים להיות אלופים?</h1>
       </div>
       <div id="section2" class="midSection">
         <div class="left" id="midLeft">
           <div class="letf-contents">
-            <div class="mobTop">
+            <div dir="rtl" class="mobTop">
+              <p class="subtitle-mobile">החלה ההרשמה לבית הספר המקצועי לטניס</p>
               <div class="leftTop">
                 <h2>מתנה</h2>
                 <p id="mobHide" style="font-size: 42px">!לכל נרשם/ת</p>
                 <p id="mobYellow" >מחבט + תיק + חולצה</p>
-                <p style="text-align: center">המבצע עד גמר המלאי*</p>
+                <p style="text-align: center">*המבצע עד גמר המלאי</p>
               </div>
-              <p id="mobTopP">החלה ההרשמה לבית הספר המקצועי לטניס</p>
             </div>
             <form action="thanks.html" method="post" onsubmit="validateForm()">
               <div class="card">
@@ -120,14 +122,14 @@
             הטובים בישראל. לגילאי 18-4
           </p>
           <div class="child-image">
-            <img src="./images/landingpage.png" alt="" />
+            <img src="./images/landingpage.png" alt="תמונת רקע מרכזי הטניס והחינוך בישראל" />
           </div>
         </div>
       </div>
       <hr />
       <div id="section3" class="footer">
         <div id="changeBg" class="footer-left">
-          <img src="./images/logo.png" alt="" width="100px" height="100px" />
+          <img src="./images/logo.png" alt="לוגו מרכזי הטניס והחינוך בישראל" width="100px" height="100px" />
           <div dir="rtl" class="fContact">
             <div class="f-fb">
               <svg
@@ -160,10 +162,8 @@
             </div>
           </div>
         </div>
-
-        <div class="large-vertical-line hidde"></div>
-
-        <div class="footer-centers-mobile">
+        <div class="large-vertical-line desktop"></div>
+        <div class="footer-centers">
           <div class="fMid">
             <p>מרכז: רמת השרון | תל אביב | יפו | קרית אונו | ירושלים | טייבה</p>
             <p>
@@ -179,6 +179,7 @@
             <p>מרכזי הטניס</p>
             <p>והחינוך שלנו</p>
           </div>
+
         </div>
       </div>
     </div>
