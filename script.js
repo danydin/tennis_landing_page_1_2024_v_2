@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $('#form-submit').select2();
     // Hide the sidebar initially
     $('#hiddeSidebar').hide();
     // Set the initial left position of #sideIcon to 0
@@ -16,6 +17,7 @@ $(document).ready(function() {
         // Reset the left position of #sideIcon to 0
         $('#sideIcon').css('left', '0');
       });
+
   });
   
 
@@ -102,3 +104,5 @@ var colorButton = document.getElementById("changeColorBtn");
         $('#section1, #midRight, #section3').toggleClass('bg-color');
         $('#midLeft').toggleClass('bg-color2');
       });
+
+      
