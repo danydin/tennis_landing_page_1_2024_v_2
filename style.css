@@ -3,19 +3,38 @@
     margin: 0;
     box-sizing: border-box;
   }
-
+  :root{
+    --primary-color: darkblue;
+  }
   @font-face {
-    font-family: 'YourFontName';
-    src: url('./fonts/FbSpoiler-Black.otf') format('otf'),
-         /* url('fonts/your-font-file.woff') format('woff'); */
-    /* Add more file formats if necessary */
-}
-
+    font-family: AdobeFnt23;
+    src: url(./fonts/AdobeFnt23.lst);
+  }
+  @font-face {
+    font-family: AdobeFnt24;
+    src: url(./fonts/AdobeFnt24.lst);
+  }
+  @font-face {
+    font-family: balooTammudu2;
+    src: url(./fonts/BalooTammudu2-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: FbSpoiler-Black;
+    src: url(./fonts/FbSpoiler-Black.otf);
+  }
+  @font-face {
+    font-family: FbSpoiler-Bold;
+    src: url(./fonts/FbSpoiler-Bold.otf);
+  }
+  @font-face {
+    font-family: FbSpoiler-light;
+    src: url(./fonts/FbSpoiler-Light.otf);
+  }
 
   body,html {
-    font-family: 'FbSpoiler-Black', sans-serif;
+    
     width: 100%;
-    background: url('./images/sky.jpg') no-repeat center center fixed;
+    background: url('./images/sky.jpg') no-repeat center fixed;
     /* Set background size to cover the entire body */
     overflow-x: hidden;
     background-size: cover;
@@ -44,14 +63,16 @@
       display: none;
   }
   .top h1 {
-    font-size: 90px;
+    font-size: 11vw;
     color: white;
+    font-family: FbSpoiler-Black;
   }
   .midSection {
     display: flex;
     justify-content: space-between;
     padding: 0px 50px;
     column-gap: 10px;
+    margin-top: -33px;
 
   }
   .right {
@@ -63,7 +84,8 @@
   }
   .right p{
       text-align: right;
-      padding-right: 70px;
+      padding-right: 115px;
+      margin-top: 22px;
   }
   .left {
     flex: 1;
@@ -76,15 +98,30 @@
     align-items: center;
   }
   .letf-contents h2{
-      color: #0b3eb8;
-      font-size: 80px ;
-      margin-bottom: -20px;
+      color: var(--primary-color);
+      font-size: 105px ;
+      margin-bottom: -26px;
+      font-weight: 800;
+      font-family: FbSpoiler-Black;
   }
   .leftTop{
       display: flex;
       flex-direction: column;
       text-align: center;
-      
+  }
+  #mobHide{
+    font-size: 1.3rem;
+    font-family: FbSpoiler-Bold;
+  }
+  #mobYellow{
+    font-family: FbSpoiler-Bold;
+    margin-top: -5px;
+    font-size: 25px
+
+  }
+  .leftTop p:last-child{
+    font-family: FbSpoiler-bold;
+    margin-top: 2px;
   }
   #crossIcon:hover{
     cursor: pointer;
@@ -98,11 +135,13 @@
   .right p {
     font-size: 30px;
     padding-left: 10px;
+    font-family: FbSpoiler-bold;
   }
   
   .child-image img {
     width: 100%;
     height: 100%;
+    padding-right:30px;
   }
   .container hr {
     color: white;
@@ -127,11 +166,10 @@
     padding: 10px 25px;
   }
   .footer-left img{
-    margin-top: -60px;
+    margin-top: -45px;
   }
   .footer-left {
     display: flex;
-
     align-items: center;
     column-gap: 40px;
   }
@@ -147,6 +185,9 @@
     display: flex;
     column-gap: 8px;
     align-items: center;
+  }
+  .fLTop p:first-child{
+    font-family: FbSpoiler-Bold;
   }
   .fLbott p:last-child{
     font-weight: 600;
@@ -169,11 +210,12 @@
   }
   .fMid p {
     text-align: right;
+    font-family: FbSpoiler-Bold;
   }
   .fRight{
   }
   .fRight p {
-    font-weight: bold;
+    font-family: FbSpoiler-Black;
   }
   .card {
     max-width: 600px;
@@ -188,6 +230,8 @@
     row-gap: 12px;
     margin-top: 20px;
     row-gap: 15px;
+    margin-top: 15px;
+    z-index: -6;
   }
   
   
@@ -197,26 +241,31 @@
   
   }
   .left .card p {
-      color: #0b3eb8;
-    font-size: 16px;
+    color: var(--primary-color);
+    font-size: 30px;
     text-align: center;
+    font-family: FbSpoiler-bold;
+    padding-top: 6px;
   
   }
   .card input{
       border: none;
       background: transparent;
       outline: none;
+      font-family: FbSpoiler-Bold;
+      font-size: 20px;
   }
   input::placeholder{
-      color: #0b3eb8;
+      color: var(--primary-color);
   }
   .card button{
-      background-color: #0b3eb8;
+      background-color: rgb(31, 31, 83);
       color: white;
       border: none;
-      font-size: 20px;
+      font-size: 23px;
       padding: 6px 0;
       margin-top: 15px;
+      font-family: FbSpoiler-Bold;
   }
   button:hover{
     cursor: pointer;
@@ -225,7 +274,9 @@
       background: transparent;
       border: none;
       outline: none;
-      color: #0b3eb8;
+      color: var(--primary-color);
+      font-size: 18px;
+      font-weight: bold;
   }
   option{
     color: black;
@@ -243,7 +294,6 @@
   }
   .footer-mobile{
     display: flex;
-    justify-content: center;
     align-items: center;
   }
  
@@ -298,7 +348,30 @@
 
 }
 
+.form-control, .select2-container--default .select2-selection--single{
+  /* font-size: 20px;
+  line-height: 29px; */
+  /* font-weight: 700; */
+  border: none;
+  /* border-bottom: 1px solid #1D2755; */
+  background-color: transparent;
+  /* color: #fff !important; */
+  /* direction: rtl; */
+  outline: none;
+  border-radius: 0;
+  padding-right: 0;
+}
+.form-control:focus,
+.form-control:active {
+  background: transparent;
+  border-color: #c1d833;
+  outline: none;
+  box-shadow: none;
+}
 
+.form-select option {
+  color: inherit;
+}
 
   
   @media  ( max-width: 800px){
@@ -307,7 +380,6 @@
       }
       .footer{
         flex-direction: column-reverse;
-        justify-content: center;
         row-gap: 10px;
        
       }
@@ -333,21 +405,23 @@
         .top h1{
           text-align: center;
           padding: 0px 10px;
-          font-size: 40px;
+          /* font-size: 40px; */
         }
   
         .leftTop{
-          background-color:#0b3eb8;
-          padding: 21px 10px;
+          background-color:var(--primary-color);
+          padding: 24px 13px;
           border-radius: 50%;
           border: 4px solid #00a1e3;
-          transform: rotate(-20deg);
+          transform: rotate(-10deg);
+          /* margin-top: 49px; */
           z-index: 1;
+
           
       }
       .leftTop h2{
           color: white;
-          font-size: 23px;
+          font-size: 50px;
       }
       .leftTop p:nth-child(2){
         color: #fedc01;
@@ -360,9 +434,8 @@
       }
       .card{
           width: 100vw;
-          margin-top: -50px;
           z-index: -11;
-          padding-top: 60px;
+          margin-top: -20px;
       }
       .leftTop p:last-child{
         font-size: 7px;
@@ -382,6 +455,10 @@
       }
       #mobTopP{
           display: block;
+          color: var(--primary-color);
+          font-size: 2rem;
+          font-family: FbSpoiler-bold;
+          text-align: end;
       }
       #mobHide{
         display: none;
@@ -390,8 +467,8 @@
         color:#fedc01;
         white-space: nowrap;
         font-weight: 600;
-        font-size: 8px !important;
-        margin-top: 16px;
+        font-size:11px !important;
+        margin-top: 18px;
       }
       button{
         border-radius: 15px;
@@ -400,8 +477,8 @@
         width: 100%;
       }
       #logo{
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
 
       }
       .fLRight{
@@ -416,20 +493,44 @@
         margin-bottom: 5px;
       }
       .child-image img{
-        width: 75%;
+        width: 130%;
+        margin-left: 54px;
       }
-  }
   
+    }
   @media (max-width: 535px){
       #mobTopP{
-        margin-bottom: 68px;
+          /* margin-bottom: 60px; */
+          margin: 24px 0px;
+          
+      }
+      .top h1{
+        font-size: 55px;
+      }
+      .mobTop{
+        column-gap: 10px;
       }
       .top h1{
         text-align: center;
         padding: 0px 10px;
-        font-size: 30px;
+        /* font-size: 30px; */
+      }
+      .card{
+        margin-top: -40px;
+      }
+      .left .card p{
+        padding-top: 37px;
       }
   }
 
-
-      
+  @media(max-width: 475px){
+    #mobTopP{
+      margin-right: -37px;
+    }
+  }
+  @media(max-width: 440px){
+    #mobTopP{
+      margin: 40px -13px;
+    }
+  }
+  
