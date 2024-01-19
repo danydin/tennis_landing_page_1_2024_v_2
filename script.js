@@ -1,5 +1,45 @@
 $(document).ready(function() {
-    $('#form-submit').select2();
+    // use custom form box style
+    $('#options').select2({
+    });
+
+      // Get the input element
+    const nameInput = document.getElementById('name');
+    // Change the default validation message
+    nameInput.setCustomValidity('נא להכניס שם מלא בבקשה');
+
+
+    nameInput.addEventListener('input', function() {
+      const hebrewRegex = /^[\u0590-\u05FF0-9]+$/;
+      // Check if the input is currently valid
+      if (hebrewRegex.test(this.value) && this.value.length >= 2) {
+        // Input is valid, clear custom validity
+        this.setCustomValidity('');
+      } else {
+        // Input is still invalid, keep custom validity message
+        this.setCustomValidity('נא להכניס שם מלא בעברית בבקשה');
+      }
+    });
+
+      // Get the input element
+      const phoneInput = document.getElementById('phone');
+      // Change the default validation message
+      phoneInput.setCustomValidity('נא להכניס מספר טלפון נייד בבקשה');
+  
+      phoneInput.addEventListener('input', function() {
+        const hebrewRegex = /^05\d{8}$/;
+        // Check if the input is currently valid
+        if (hebrewRegex.test(this.value) && this.value.length == 10) {
+          // Input is valid, clear custom validity
+          this.setCustomValidity('');
+        } else {
+          // Input is still invalid, keep custom validity message
+          this.setCustomValidity('נא להכניס מספר טלפון נייד תקין בבקשה');
+        }
+      });
+
+
+
     // Hide the sidebar initially
     $('#hiddeSidebar').hide();
     // Set the initial left position of #sideIcon to 0
@@ -18,11 +58,8 @@ $(document).ready(function() {
         $('#sideIcon').css('left', '0');
       });
 
-  });
-  
 
-
-$(document).ready(function() {
+      // acessbility
     var clickCount = 0;
   
     $('#zoomButton').click(function() {
@@ -75,15 +112,9 @@ $(document).ready(function() {
     });
 
 
-
-});
-
-$(document).ready(function() {
     $("#bwButton").click(function() {
         $("body").toggleClass("grayscale");
     });
-});
-
 
 var colorButton = document.getElementById("changeColorBtn");
     var changLinkBg = document.getElementById("changeBg");
@@ -104,5 +135,34 @@ var colorButton = document.getElementById("changeColorBtn");
         $('#section1, #midRight, #section3').toggleClass('bg-color');
         $('#midLeft').toggleClass('bg-color2');
       });
+    });
 
       
+// to review:
+
+// sending api request 
+function submitForm() {
+        // Get form data
+        var formData = new FormData(document.getElementById('myForm'));
+
+        // Send POST request using fetch
+        fetch('ajax-contact.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            // Handle success response
+            console.log(data);
+            // You can perform additional actions here if needed
+        })
+        .catch(error => {
+            // Handle errors
+            console.error('There was a problem with the fetch operation:', error);
+        });
+    }
