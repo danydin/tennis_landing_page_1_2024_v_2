@@ -371,7 +371,7 @@
     display: none;
 }
 
-.gifth2{
+.gifth2-desktop{
   color: var(--primary-color);
   font-size:  7em;
   font-family: FbSpoiler-Black;
@@ -401,18 +401,6 @@
 
     }
 
-    .large-vertical-line.desktop{
-      display: none;
-    }
-
-    .footer-left img{
-        display: none;
-    }
-    .footer{
-      flex-direction: column-reverse;
-      row-gap: 10px;
-      
-    }
     .left {
       margin-bottom: 0px;
     }
@@ -446,18 +434,17 @@
       transform: rotate(-10deg);
       /* margin-top: 49px; */
       z-index: 1;
+      font-family: FbSpoiler-bold
     }
-
-    .circle-gift h2{
+    
+    .gifth2-mobile{
         color: white;
         font-size: 2em;
     }
     .circle-gift p:nth-child(2){
       color: #fedc01;
     }
-
     .circle-gift p:last-child{
-      font-family: FbSpoiler-bold;
       margin-top: 2px;
     }
       .right p{
@@ -478,9 +465,9 @@
           width: 100%;
       }
       .left{
-          width: 100%;
-          
+          width: 100%;    
       }
+
       .mobTop{
           display: flex;
           justify-content: center;
@@ -508,6 +495,20 @@
       .card input{
         width: 100%;
       }
+
+      .large-vertical-line.desktop{
+        display: none;
+      }
+  
+      .footer-left img{
+          display: none;
+      }
+      .footer{
+        flex-direction: column-reverse;
+        row-gap: 10px;
+        
+      }
+
       .fContact{
         display: flex;
         align-items: center;
