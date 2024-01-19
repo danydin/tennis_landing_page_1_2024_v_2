@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,15 +48,15 @@
             <div dir="rtl" class="mobTop">
               <p class="subtitle-mobile">החלה ההרשמה לבית הספר המקצועי לטניס</p>
               <div dir="rtl" class="circle-gift">
-                <h2>מתנה</h2>
-                <p id="mobHide" style="font-size: 42px">לכל נרשם/ת!</p>
-                <p id="mobYellow" >מחבט + תיק + חולצה</p>
-                <p style="text-align: center">*המבצע עד גמר המלאי</p>
+                <h2 class="gifth2">מתנה</h2>
+                <p class="gift-desc-desktop">לכל נרשם/ת!</p>
+                <p class="gift-desc gift-desc-mobile" >מחבט + תיק + חולצה</p>
+                <p id="terms-gift">*המבצע עד גמר המלאי</p>
               </div>
             </div>
-            <form action="inc/send.php" method="POST" onsubmit="">
+            <form action="inc/send.php" method="POST" onsubmit="" novalidate="novalidate">
               <div dir="rtl" class="card">
-                <p>מספר המקומות מוגבל, הקדימו והירשמו:</p>
+                <p class="form-title">מספר המקומות מוגבל, הקדימו והירשמו:</p>
                 <input
                   type="text"
                   name="name"
@@ -183,8 +184,9 @@
         </div>
       </div>
     </div>
-  </body>
+
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
   <script src="script.js"></script>
+  </body>
   </html>

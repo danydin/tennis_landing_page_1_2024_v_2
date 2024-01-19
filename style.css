@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   :root{
-    --primary-color: darkblue;
+    --primary-color: #014282;
   }
   @font-face {
     font-family: AdobeFnt23;
@@ -34,7 +34,7 @@
   body,html {
     
     width: 100%;
-    background: url('./images/sky.jpg') no-repeat center fixed;
+    background: url('./images/sky.webp') no-repeat center fixed;
     /* Set background size to cover the entire body */
     overflow-x: hidden;
     background-size: cover;
@@ -93,13 +93,6 @@
     justify-content: center;
     align-items: center;
   }
-  .letf-contents h2{
-      color: var(--primary-color);
-      font-size: 105px ;
-      margin-bottom: -26px;
-      font-weight: 800;
-      font-family: FbSpoiler-Black;
-  }
 
   #select2-options-container{
     padding: 0;
@@ -108,16 +101,25 @@
     font-family: 'FbSpoiler-Bold';
   }
 
-  #mobHide{
-    font-size: 1.3rem;
+  .gift-desc-desktop{
+    font-size: 2.8em;
     font-family: FbSpoiler-Bold;
+    text-align: center;
+    margin-top: -10%;
   }
-  #mobYellow{
-    font-family: FbSpoiler-Bold;
-    margin-top: -5px;
-    font-size: 25px
 
+  .gift-desc{
+    text-align: center;
+    font-family: FbSpoiler-bold;
+    font-size: 2em;
+    margin-top: -3%;
   }
+  
+  #terms-gift{
+    font-family:"FbSpoiler-bold";
+    text-align: center;
+  }
+
 
   #crossIcon:hover{
     cursor: pointer;
@@ -192,6 +194,7 @@
   }
   .fRight p {
     font-family: FbSpoiler-Black;
+    font-size: 1.2em;
   }
 
   .footer-contact__tel {
@@ -253,9 +256,9 @@
       /* height: fit-content; */
   
   }
-  .left .card p {
+  .form-title {
     color: var(--primary-color);
-    font-size: 30px;
+    font-size: 1.6em;
     text-align: center;
     font-family: FbSpoiler-bold;
     padding-top: 6px;
@@ -368,6 +371,13 @@
     display: none;
 }
 
+.gifth2{
+  color: var(--primary-color);
+  font-size:  7em;
+  font-family: FbSpoiler-Black;
+  text-align: center;
+}
+
   .f-fb {
     display: flex;
     align-items: center;
@@ -424,22 +434,23 @@
       padding: 0px 10px;
       /* font-size: 40px; */
     }
-  
-      .circle-gift{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background-color:var(--primary-color);
-        padding: 24px 13px;
-        border-radius: 50%;
-        border: 4px solid #00a1e3;
-        transform: rotate(-10deg);
-        /* margin-top: 49px; */
-        z-index: 1;
+
+    .circle-gift{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background-color:var(--primary-color);
+      padding: 24px 13px;
+      border-radius: 50%;
+      border: 4px solid #00a1e3;
+      transform: rotate(-10deg);
+      /* margin-top: 49px; */
+      z-index: 1;
     }
+
     .circle-gift h2{
         color: white;
-        font-size: 50px;
+        font-size: 2em;
     }
     .circle-gift p:nth-child(2){
       color: #fedc01;
@@ -482,15 +493,14 @@
           font-family: FbSpoiler-bold;
           margin: 2em 0;
       }
-      #mobHide{
+      .gift-desc-desktop{
         display: none;
       }
-      #mobYellow{
+      .gift-desc-mobile{
         color:#fedc01;
         white-space: nowrap;
         font-weight: 600;
-        font-size:11px !important;
-        margin-top: 18px;
+        font-size:11px;
       }
       button{
         border-radius: 15px;
@@ -544,8 +554,8 @@
       .card{
         margin-top: -40px;
       }
-      .left .card p{
-        padding-top: 37px;
-      }
-  }
-  
+    }
+
+  .select2, .selection, .select2-selection, .select2-selection__rendered, .dropdown-wrapper, .select2-selection__arrow {    
+    background-color: transparent;
+}

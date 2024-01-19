@@ -2,44 +2,7 @@ $(document).ready(function() {
     // use custom form box style
     $('#options').select2({
     });
-
-      // Get the input element
-    const nameInput = document.getElementById('name');
-    // Change the default validation message
-    nameInput.setCustomValidity('נא להכניס שם מלא בבקשה');
-
-
-    nameInput.addEventListener('input', function() {
-      const hebrewRegex = /^[\u0590-\u05FF0-9]+$/;
-      // Check if the input is currently valid
-      if (hebrewRegex.test(this.value) && this.value.length >= 2) {
-        // Input is valid, clear custom validity
-        this.setCustomValidity('');
-      } else {
-        // Input is still invalid, keep custom validity message
-        this.setCustomValidity('נא להכניס שם מלא בעברית בבקשה');
-      }
-    });
-
-      // Get the input element
-      const phoneInput = document.getElementById('phone');
-      // Change the default validation message
-      phoneInput.setCustomValidity('נא להכניס מספר טלפון נייד בבקשה');
-  
-      phoneInput.addEventListener('input', function() {
-        const hebrewRegex = /^05\d{8}$/;
-        // Check if the input is currently valid
-        if (hebrewRegex.test(this.value) && this.value.length == 10) {
-          // Input is valid, clear custom validity
-          this.setCustomValidity('');
-        } else {
-          // Input is still invalid, keep custom validity message
-          this.setCustomValidity('נא להכניס מספר טלפון נייד תקין בבקשה');
-        }
-      });
-
-
-
+    
     // Hide the sidebar initially
     $('#hiddeSidebar').hide();
     // Set the initial left position of #sideIcon to 0
