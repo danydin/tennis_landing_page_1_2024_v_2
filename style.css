@@ -73,7 +73,7 @@
   .sidebar{
     color: black;
     position: absolute;
-    top: 20%;
+    top: 5%;
     font-size: 45px;
     z-index: 3;
     background-color: rgb(249 245 245);
@@ -119,7 +119,7 @@
   }
 
   .bg-color2{
-    background-color: #343a40;
+    background-color: #343a4a !important;
   }
 
   .main-title {
@@ -290,12 +290,13 @@
     align-items: center;
     column-gap: 40px;
   }
+
   .footer-left img{
     margin-top: -45px;
     width: 8vw;
   }
 
-  .fContactContainer{
+  .fContact{
     font-family: 'FbSpoiler-Bold';
   }
 
@@ -310,7 +311,7 @@
     height: 15px; /* Adjust the height of the line */
     background-color: white; /* Set the color of the line */
   }
-  .fMid p {
+  .fMid-desktop p {
     text-align: right;
     font-family: FbSpoiler-Bold;
   }
@@ -358,7 +359,7 @@
 
 }
 
-.footer-centers{
+.footer-right{
   display: flex;
   align-items: center;
 }
@@ -408,6 +409,15 @@
     margin-right: -10%;
   }
 
+  .footer-left, .footer-right{
+    flex:1;
+    justify-content: flex-start;
+  }
+
+  .footer-left{
+    justify-content: space-between;
+  }
+
   .f-fb {
     display: flex;
     align-items: center;
@@ -424,7 +434,7 @@
   }
 }
 
-  @media only screen and ( max-width: 1400px){
+  @media only screen and ( max-width: 1399px){
     #mobile-logo{
       width: 15vw;
       height: 15vw;
@@ -547,20 +557,29 @@
         display: none;
       }
 
+      .footer{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+
       .footer-left img{
           display: none;
       }
-      .footer{
-        flex-direction: column-reverse;
-        row-gap: 10px;
-        
-      }
 
-      .footer-centers{
+      .footer-right{
         font-size: 2.3vw;
+        height: 100%;
       }
 
-      .fContactContainer{
+      .fRight{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .fContact{
         display: flex;
         align-items: center;
         font-size: 2.3vw;

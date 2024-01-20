@@ -99,7 +99,7 @@ var colorButton = document.getElementById("changeColorBtn");
     $('#backColorChange').click(function() {
         // Toggle the 'highlight' class for sections 1, 2, and 3
         $('#section1, #midRight, #section3').toggleClass('bg-color');
-        $('#midLeft').toggleClass('bg-color2');
+        $('#midLeft, #section3').toggleClass('bg-color2');
       });
     });
 
