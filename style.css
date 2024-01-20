@@ -242,6 +242,133 @@
     cursor: pointer;
   }
 
+
+  input {
+    font-size: 20px;
+    height: 35px;
+    color: #014282;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input::placeholder {
+    color: #014282;
+  }
+
+  .input_error {
+    position: relative;
+  }
+  .tooltip_error {
+    padding: 5px 10px;
+    line-height: 1.3847;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    -ms-transform: scale(0.95) translate(0, 4px);
+    -moz-transform: scale(0.95) translate(0, 4px);
+    -webkit-transform: scale(0.95) translate3d(0, 4px, 0);
+    transform: scale(0.95) translate(0, 4px);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    z-index: 9;
+    color: #223d79;
+    transition: 0.2s ease-out all;
+    visibility: hidden;
+  }
+  .tooltip_error::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    border-color: #fff transparent transparent transparent;
+  }
+
+  .list {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    color: #014282;
+    font-size: 20px;
+    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .list .text{
+    font-family: 'FbSpoiler-Bold';
+  }
+  .scrollbar-inner {
+    visibility: hidden;
+    background-color: #FFF;
+    height: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    direction: rtl;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    font-size: 20px;
+    font-family: 'FbSpoiler-Bold';
+    cursor: pointer;
+    padding: 2px 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    direction: rtl;
+  }
+  li:hover{
+    background: #014282;
+    color: #FFF;
+  }
+  .title_list {
+    border-bottom: 1px solid #FFF;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 7px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .icon-chev_down {
+    font-size: 14px;
+  }
+
+  .btn {
+    background-color: rgb(31, 31, 83);
+    color: white;
+    border: none;
+    font-size: 23px;
+    padding: 6px 0;
+    z-index: 100;
+    cursor: pointer;
+    margin-top: 15px;
+    font-family: FbSpoiler-Bold;
+  }
+
   .gift-desc{
     font-size: 4vw;
     font-family: FbSpoiler-Bold;
