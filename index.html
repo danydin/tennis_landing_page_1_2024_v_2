@@ -1,8 +1,15 @@
+<!-- 
+1. fix footer last line spaces on moible
+2. fix fonts of title on mobile
+3. make spaces between lines in footercneters
+4. incraese a bit המבע עד גמר המלאי
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <title>title</title>
     <link rel="stylesheet" href="style.css?=v1.2" />
     <link
@@ -39,11 +46,13 @@
       <div class="logo-top-mobile">
         <img id="mobile-logo" src="./images/logo.png" alt="לוגו מרכזי הטניס והחינוך בישראל" />
       </div>
+
       <div dir="rtl" id="section1" class="main-title">
         <h1>רוצים להיות אלופים?</h1>
       </div>
+
       <div id="section2" class="midSection">
-        <div class="left" id="midLeft">
+        <div dir="rtl" class="left" id="midLeft">
           <div class="left-contents">
             <div dir="rtl" class="sub-mobile-container">
               <p class="subtitle-mobile">החלה ההרשמה 
@@ -58,7 +67,7 @@
                 <p id="terms-gift">*המבצע עד גמר המלאי</p>
               </div>
             </div>
-            <form action="inc/send.php" method="POST" onsubmit="" novalidate="novalidate">
+            <form id="form_set" action="inc/send.php" method="POST" onsubmit="" novalidate="novalidate">
               <div dir="rtl" class="card">
                 <p class="form-title">מספר המקומות מוגבל, הקדימו והירשמו:</p>
                 <input
@@ -117,9 +126,8 @@
             </form>
           </div>
         </div>
-
-        <div class="right" id="midRight">
-          <p dir="rtl">
+        <div dir="rtl" class="right" id="midRight">
+          <p>
             החלה ההרשמה לבית הספר המקצועי לטניס
             <br /> 
             אימוני טניס לילדים בכל הרמות, בהדרכת המאמנים
@@ -127,14 +135,15 @@
             הטובים בישראל. לגילאי 18-4
           </p>
           <div class="child-image">
-            <img src="./images/landingpage.png" alt="תמונת רקע מרכזי הטניס והחינוך בישראל" />
+            <img src="./images/landingpage.png" alt="תמונה ילדים לוחצים ידים של מרכזי הטניס והחינוך בישראל" />
           </div>
         </div>
       </div>
+      
       <hr />
       <div id="section3" class="footer">
         <div id="changeBg" class="footer-left">
-          <img src="./images/logo.png" alt="לוגו מרכזי הטניס והחינוך בישראל" width="100px" height="100px" />
+          <img src="./images/logo.png" alt="לוגו מרכזי הטניס והחינוך בישראל" />
           <div dir="rtl" class="fContact">
             <div class="f-fb">
               <svg
@@ -188,6 +197,40 @@
         </div>
       </div>
     </div>
+
+<!-- 
+  <style>
+    .flex-container {
+      display: flex;
+      border: 5px solid #ccc;
+    }
+
+    .flex-item {
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #888;
+    }
+
+    .flex-item-1 {
+      flex: 2; /* Equal distribution of space */
+    }
+
+    .flex-item-2 {
+      flex: 4; /* Takes twice the space of flex-item-1 */
+    }
+
+    .flex-item-3 {
+      flex: 2; /* Takes the same space as flex-item-1 */
+    }
+  </style>
+
+<div class="flex-container">
+  <div class="flex-item flex-item-1">Item 1</div>
+  <div class="flex-item flex-item-2">Item 2</div>
+  <div class="flex-item flex-item-3">Item 3</div>
+</div> -->
+
+
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>

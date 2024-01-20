@@ -1,5 +1,8 @@
+
+
 $(document).ready(function() {
-    // use custom form box style
+    
+  // use custom form box style
     $('#options').select2({
     });
     
