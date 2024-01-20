@@ -45,12 +45,15 @@
 
     filter: grayscale(0); /* Set default value */
   }
+
   body.grayscale {
     filter: grayscale(100%);
-}
+  }
+
   .container {
     color: white;
   }
+
   .main-title {
     width: 100%;
     display: flex;
@@ -79,7 +82,7 @@
   .right p{
       text-align: right;
       /* padding-right: 115px; */
-      font-size: 2em;
+      font-size: 2.6vw;
       font-family: FbSpoiler-bold;
   }
 
@@ -91,22 +94,88 @@
   .left {
     flex: 1;
   }
+
   .left-contents {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
   }
 
-  #select2-options-container{
-    padding: 0;
+  .card {
+    max-width: 100%;
+    min-width: 50%;
+    background: rgba( 255, 255, 255, 0.45 );
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+    /* backdrop-filter: blur( 4px ); */
+    /* -webkit-backdrop-filter: blur( 4px ); */
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    row-gap: 15px;
+    margin-top: 15px;
+    z-index: -6;
+  }
+
+  .form-title {
     color: var(--primary-color);
-    font-size: 20px;
-    font-family: 'FbSpoiler-Bold';
+    font-size: 1.6em;
+    text-align: center;
+    font-family: FbSpoiler-bold;
+    padding-top: 6px;
+
+  }
+
+  .card input{
+      width: 100%;
+      border: none;
+      background: transparent;
+      outline: none;
+      font-family: FbSpoiler-Bold;
+      font-size: 20px;
+  }
+
+  input::placeholder{
+      color: var(--primary-color);
+  }
+
+  .card button{
+      background-color: rgb(31, 31, 83);
+      color: white;
+      border: none;
+      font-size: 23px;
+      padding: 6px 0;
+      margin-top: 15px;
+      font-family: FbSpoiler-Bold;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+
+  select{
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--primary-color);
+      font-size: 18px;
+      font-weight: bold;
+  }
+
+  option{
+    color: black;
+  }
+
+  select:hover{
+    cursor: pointer;
   }
 
   .gift-desc-desktop{
-    font-size: 2.8em;
+    font-size: 4vw;
     font-family: FbSpoiler-Bold;
     text-align: center;
     margin-top: -10%;
@@ -119,15 +188,6 @@
     margin-top: -3%;
   }
 
-  #crossIcon:hover{
-    cursor: pointer;
-  }
-  ul li:hover{
-    cursor: pointer;
-  }
-  #sideIcon:hover{
-    cursor: pointer;
-  }
   .container hr {
     color: white;
     height: 10px;
@@ -136,11 +196,32 @@
     width: 100%;
     margin-top: -15px;
   }
+
+  .sidebar #crossIcon:hover{
+    cursor: pointer;
+  }
+
+  .sidebar ul li:hover{
+    cursor: pointer;
+  }
+
+  .sidebar #sideIcon:hover{
+    cursor: pointer;
+  }
+
   .bg-color {
     background-color: #fd7e14;
   }
+
   .bg-color2{
     background-color: #343a40;
+  }
+
+  #select2-options-container{
+    padding: 0;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-family: 'FbSpoiler-Bold';
   }
 
   .select2-selection, .select2-selection--single{
@@ -165,7 +246,7 @@
     margin-top: -45px;
   }
 
-  .fContact{
+  .fContactContainer{
     font-family: 'FbSpoiler-Bold';
   }
 
@@ -222,90 +303,30 @@
   opacity: .6;
 }
 
-  .card {
-    max-width: 100%;
-    background: rgba( 255, 255, 255, 0.45 );
-    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
-    /* backdrop-filter: blur( 4px ); */
-    /* -webkit-backdrop-filter: blur( 4px ); */
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    row-gap: 15px;
-    margin-top: 15px;
-    z-index: -6;
-  }
-  
-  .form-title {
-    color: var(--primary-color);
-    font-size: 1.6em;
-    text-align: center;
-    font-family: FbSpoiler-bold;
-    padding-top: 6px;
-  
-  }
-  .card input{
-      width: 100%;
-      border: none;
-      background: transparent;
-      outline: none;
-      font-family: FbSpoiler-Bold;
-      font-size: 20px;
-  }
-  input::placeholder{
-      color: var(--primary-color);
-  }
-  .card button{
-      background-color: rgb(31, 31, 83);
-      color: white;
-      border: none;
-      font-size: 23px;
-      padding: 6px 0;
-      margin-top: 15px;
-      font-family: FbSpoiler-Bold;
-  }
-  button:hover{
-    cursor: pointer;
-  }
-  select{
-      background: transparent;
-      border: none;
-      outline: none;
-      color: var(--primary-color);
-      font-size: 18px;
-      font-weight: bold;
-  }
-  option{
-    color: black;
-  }
-  select:hover{
-    cursor: pointer;
-  }
-  #inputHr{
-      height: 1px;
-      margin-top: -10px;
-  
-  }
+#inputHr{
+    height: 1px;
+    margin-top: -10px;
 
-  .footer-centers{
-    display: flex;
-    align-items: center;
-  }
- 
-  
-  #sideIcon{
-    position: absolute;
-    right: -40px;
-    background-color: black;
-    width: 40px;
-    height: 40px;
-    color: white;
-    padding: 5px;
-    font-size: 30px;
-    transition: left 0.3s ease-in-out;
-  }
+}
+
+.footer-centers{
+  display: flex;
+  align-items: center;
+}
+
+
+#sideIcon{
+  position: absolute;
+  right: -40px;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  color: white;
+  padding: 5px;
+  font-size: 30px;
+  transition: left 0.3s ease-in-out;
+}
+
 #crossIcon{
   font-size: 30px;
 }
@@ -353,6 +374,10 @@
     display: none;
 }
 
+  .left-contents{
+    max-height: 80%;
+  }
+
   #terms-gift{
     font-family:"FbSpoiler-bold";
     text-align: center;
@@ -361,9 +386,13 @@
 
   .gifth2-desktop{
     color: var(--primary-color);
-    font-size:  7em;
+    font-size:  9vw;
     font-family: FbSpoiler-Black;
     text-align: center;
+  }
+
+  #form {
+    width: 70%;
   }
 
   .right .child-image {
@@ -506,11 +535,11 @@
         
       }
 
-      .fContact{
+      .fContactContainer{
         display: flex;
         align-items: center;
         font-size: 10px;
-        gap: 0.9rem;
+        gap: 2vw;
         justify-content: space-between;
       }
       .f-fb{
@@ -521,7 +550,7 @@
       .f-phone-mobile{
         border-right: 1px solid white; 
         border-left: 1px solid white;
-        padding: 0 1rem;
+        padding: 0 2vw;
 
       }
       .f-url-phone-desktop{
