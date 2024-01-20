@@ -77,7 +77,6 @@
     font-size: 45px;
     z-index: 3;
     background-color: rgb(249 245 245);
-    /* padding: 10px 30px; */
     width:300px; 
   }
 
@@ -181,7 +180,7 @@
     /* backdrop-filter: blur( 4px ); */
     /* -webkit-backdrop-filter: blur( 4px ); */
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    padding: 10px 20px;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -378,7 +377,7 @@
 }
 
   .left-contents{
-    margin-top: -5vw;
+    margin-top: -8vw;
   }
   .circle-gift-container-mobile{
     display: none;
@@ -387,7 +386,7 @@
   #terms-gift{
     font-family:"FbSpoiler-bold";
     text-align: center;
-    font-size: 1em;
+    font-size: 1vw;
   }
 
   .gifth2{
@@ -479,8 +478,8 @@
 
       .subtitle-mobile{
         color: var(--primary-color);
-        font-size: 6vw;
-        margin-right: 10vw;
+        font-size: clamp(3vw,6vw,6vw);
+        /* margin-right: 10vw; */
         font-family: FbSpoiler-bold;
     }
 
@@ -499,6 +498,9 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        width: 150px;
+        height: 150px;
         background-color:var(--primary-color);
         padding: 10% 5%;
         margin: 10% 0;
@@ -521,6 +523,13 @@
         font-size: 1em;
         margin-top: -8%;
         color: #fedc01;
+      }
+
+      #terms-gift{
+        font-size: 10px;
+        /* padding: 0 10px; */
+        white-space: nowrap;
+
       }
 
       .gift-desktop{
@@ -547,10 +556,14 @@
         
       }
 
+      .footer-centers{
+        font-size: 2.3vw;
+      }
+
       .fContactContainer{
         display: flex;
         align-items: center;
-        font-size: 10px;
+        font-size: 2.3vw;
         gap: 1vw;
         justify-content: space-between;
       }
@@ -568,9 +581,7 @@
       .f-url-phone-desktop{
         display: none;
       }
-      .footer-centers{
-        font-size: 10px;
-      }
+
       .child-image{
         display: flex;
         justify-content: center;
@@ -579,6 +590,10 @@
       }
       .child-image img{
         margin-left: 15%;
+      }
+
+      .loc-center,.loc-south{
+        line-height: 4vw;
       }
 
     }
