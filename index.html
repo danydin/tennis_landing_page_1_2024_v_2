@@ -48,13 +48,7 @@
       <div class="logo-top-mobile">
         <img id="mobile-logo" src="./images/logo.png" alt="לוגו מרכזי הטניס והחינוך בישראל" />
       </div>
-<!-- 
-      <div dir="rtl" class="circle-gift">
-        <h2 class="gifth2-mobile">מתנה</h2>
-        <p class="gift-desc-mobile" >מחבט + תיק + חולצה</p>
-        <p id="terms-gift">*המבצע עד גמר המלאי</p>
-      </div> -->
-
+    
       <div dir="rtl" id="section1" class="main-title">
         <h1>רוצים להיות אלופים?</h1>
       </div>
@@ -75,63 +69,73 @@
                 <p id="terms-gift">*המבצע עד גמר המלאי</p>
               </div>
             </div>
-            <form id="form" action="inc/send.php" method="POST" onsubmit="" novalidate="novalidate">
-              <div dir="rtl" class="card">
-                <p class="form-title">מספר המקומות מוגבל, הקדימו והירשמו:</p>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="שם מלא"
-                  required
-                />
-                <hr id="inputHr" />
-                <input
-                  type="tel"
-                  name="phone"
-                  id="phone"
-                  pattern="^05\d{8}$"
-                  title="נא להכניס מספר טלפון תקין"
-                  placeholder="מספר טלפון"
-                  dir="rtl"
-                  required
-                />
-                <hr id="inputHr" />
-                <select
-                  placeholder="בחירת מרכז"
-                  id="options"
-                  required
-                  name="select"
-                  class="form-control js-select"
-                >
-                  <option value="" disabled selected hidden>בחירת מרכז</option>
-                  <option>אופקים</option>
-                  <option>אשקלון</option>
-                  <option>באר שבע</option>
-                  <option>בוקעאתא</option>
-                  <option>גליל סאג'ור</option>
-                  <option>דימונה</option>
-                  <option>חיפה</option>
-                  <option>חצור הגלילית</option>
-                  <option>טייבה</option>
-                  <option>טבריה</option>
-                  <option>יפו</option>
-                  <option>יקנעם</option>
-                  <option>ירושלים</option>
-                  <option>מגדל העמק</option>
-                  <option>מסעדה</option>
-                  <option>נהריה</option>
-                  <option>עכו</option>
-                  <option>ערד</option>
-                  <option>קרית אונו</option>
-                  <option>קרית שמונה</option>
-                  <option>רמת השרון</option>
-                  <option>תל אביב</option>
-                </select>
-                <hr id="inputHr" />
-                <button type="submit">שליחה</button>
+
+            <div class="form-circle-container">
+              <div class="circle-gift-container-mobile">
+                <div dir="rtl" class="circle-gift-mobile">
+                  <h2 class="gifth2-mobile">מתנה</h2>
+                  <p class="gift-desc-mobile" >מחבט + תיק + חולצה</p>
+                  <p id="terms-gift">*המבצע עד גמר המלאי</p>
+                </div>
               </div>
-            </form>
+              <form id="form" action="inc/send.php" method="POST" onsubmit="" novalidate="novalidate">
+                <div dir="rtl" class="card">
+                  <p class="form-title">מספר המקומות מוגבל, הקדימו והירשמו:</p>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="שם מלא"
+                    required
+                  />
+                  <hr id="inputHr" />
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    pattern="^05\d{8}$"
+                    title="נא להכניס מספר טלפון תקין"
+                    placeholder="מספר טלפון"
+                    dir="rtl"
+                    required
+                  />
+                  <hr id="inputHr" />
+                  <select
+                    placeholder="בחירת מרכז"
+                    id="options"
+                    required
+                    name="select"
+                    class="form-control js-select"
+                  >
+                    <option value="" disabled selected hidden>בחירת מרכז</option>
+                    <option>אופקים</option>
+                    <option>אשקלון</option>
+                    <option>באר שבע</option>
+                    <option>בוקעאתא</option>
+                    <option>גליל סאג'ור</option>
+                    <option>דימונה</option>
+                    <option>חיפה</option>
+                    <option>חצור הגלילית</option>
+                    <option>טייבה</option>
+                    <option>טבריה</option>
+                    <option>יפו</option>
+                    <option>יקנעם</option>
+                    <option>ירושלים</option>
+                    <option>מגדל העמק</option>
+                    <option>מסעדה</option>
+                    <option>נהריה</option>
+                    <option>עכו</option>
+                    <option>ערד</option>
+                    <option>קרית אונו</option>
+                    <option>קרית שמונה</option>
+                    <option>רמת השרון</option>
+                    <option>תל אביב</option>
+                  </select>
+                  <hr id="inputHr" />
+                  <button type="submit">שליחה</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
         <div dir="rtl" class="right" id="midRight">

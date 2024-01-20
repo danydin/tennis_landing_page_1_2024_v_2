@@ -54,6 +54,75 @@
     color: white;
   }
 
+  #sideIcon{
+    position: absolute;
+    right: -40px;
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    color: white;
+    padding: 5px;
+    font-size: 30px;
+    transition: left 0.3s ease-in-out;
+  }
+
+  #crossIcon{
+    font-size: 30px;
+  }
+
+  .sidebar{
+    color: black;
+    position: absolute;
+    top: 20%;
+    font-size: 45px;
+    z-index: 3;
+    background-color: rgb(249 245 245);
+    /* padding: 10px 30px; */
+    width:300px; 
+  }
+
+  .sidebar ul li{
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
+    background-color: white;
+    font-size: 16px;
+    display: flex;
+      gap: 10px;
+
+  }
+  .sidebar ul li:hover{
+  background-color: rgb(193, 191, 191);
+  color: white;
+  }
+
+  .contents{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .sidebar #crossIcon:hover{
+    cursor: pointer;
+  }
+
+  .sidebar ul li:hover{
+    cursor: pointer;
+  }
+
+  .sidebar #sideIcon:hover{
+    cursor: pointer;
+  }
+
+  .bg-color {
+    background-color: #fd7e14;
+  }
+
+  .bg-color2{
+    background-color: #343a40;
+  }
+
   .main-title {
     width: 100%;
     display: flex;
@@ -106,7 +175,7 @@
 
   .card {
     max-width: 100%;
-    min-width: 50%;
+    min-width: 30vw;
     background: rgba( 255, 255, 255, 0.45 );
     /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
     /* backdrop-filter: blur( 4px ); */
@@ -195,26 +264,6 @@
     border: none;
     width: 100%;
     margin-top: -15px;
-  }
-
-  .sidebar #crossIcon:hover{
-    cursor: pointer;
-  }
-
-  .sidebar ul li:hover{
-    cursor: pointer;
-  }
-
-  .sidebar #sideIcon:hover{
-    cursor: pointer;
-  }
-
-  .bg-color {
-    background-color: #fd7e14;
-  }
-
-  .bg-color2{
-    background-color: #343a40;
   }
 
   #select2-options-container{
@@ -315,57 +364,6 @@
   align-items: center;
 }
 
-
-#sideIcon{
-  position: absolute;
-  right: -40px;
-  background-color: black;
-  width: 40px;
-  height: 40px;
-  color: white;
-  padding: 5px;
-  font-size: 30px;
-  transition: left 0.3s ease-in-out;
-}
-
-#crossIcon{
-  font-size: 30px;
-}
-
-.sidebar{
-  color: black;
-  position: absolute;
-  top: 20%;
-  font-size: 45px;
-  z-index: 3;
-  background-color: rgb(249 245 245);
-  /* padding: 10px 30px; */
-  width:300px;
-
-  
-}
-.sidebar ul li{
-  list-style: none;
-  padding: 5px;
-  margin: 5px;
-  background-color: white;
-  font-size: 16px;
-  display: flex;
-    gap: 10px;
-
-}
-.sidebar ul li:hover{
- background-color: rgb(193, 191, 191);
- color: white;
-}
-.contents{
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  transition: left 0.3s ease-in-out;
-
-}
-
 @media only screen and ( min-width: 1400px) {
   .logo-top-mobile{
     display: none;
@@ -375,10 +373,17 @@
     display: none;
 }
 
-  .left-contents{
-    max-height: 80%;
-  }
+.circle-gift-mobile{
+  display: none;
+}
 
+  .left-contents{
+    margin-top: -5vw;
+  }
+  .circle-gift-container-mobile{
+    display: none;
+  }
+  
   #terms-gift{
     font-family:"FbSpoiler-bold";
     text-align: center;
@@ -401,7 +406,7 @@
   }
 
   .right .child-image {
-    margin-right: -10%
+    margin-right: -10%;
   }
 
   .f-fb {
@@ -424,7 +429,6 @@
     #mobile-logo{
       width: 15vw;
       height: 15vw;
-
     }
 
     .left {
@@ -465,7 +469,6 @@
       .left{
           width: 100%;    
       }
-
       .sub-mobile-container{
           display: flex;
           width: 100%;
@@ -474,15 +477,25 @@
           z-index: 2;
       }
 
-
       .subtitle-mobile{
         color: var(--primary-color);
         font-size: 6vw;
-        margin-right: 3vw;
+        margin-right: 10vw;
         font-family: FbSpoiler-bold;
     }
 
-      .circle-gift{
+    .form-circle-container{
+      position: relative;
+    }
+
+      .circle-gift-container-mobile{
+        position: absolute;
+        top:  -120px;
+        left: 20px;
+        color: white;
+      }
+
+      .circle-gift-mobile{
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -575,6 +588,6 @@
       .main-title h1{
         font-size: 55px;
         text-align: center;
-        padding: 0px 10px;
+        padding: 0px 10px 30px;
       }
     }
