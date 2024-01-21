@@ -114,7 +114,7 @@ const tooltip_3 = document.getElementById("tooltip_3");
 
 const numberValidataion = () => {};
 const handleSubmit = (event) => {
-  event.preventDefault();
+  // event.preventDefault();
   const selectInput = document.getElementById("input_3");
   tooltip_1.style.visibility =
     input_1.value.trim() === "" ? "visible" : "hidden";
