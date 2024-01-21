@@ -45,6 +45,8 @@ $(document).ready(function() {
         clickCount = 0;
       }
     });
+
+    $('.animate_opacity').addClass('show');
   });
 
 
@@ -171,4 +173,5 @@ function selectOption(option) {
   input_3.innerText = option.innerText;
   toggleDropdown();
 }
+
 
