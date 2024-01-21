@@ -132,7 +132,7 @@
   .main-title h1 {
     font-size: 11vw;
     color: white;
-    font-family: FbSpoiler-Black;
+    font-family: 'FbSpoiler-Black';
   }
   .midSection {
     display: flex;
@@ -371,7 +371,7 @@
 
   .gift-desc{
     font-size: 4vw;
-    font-family: FbSpoiler-Bold;
+    font-family: FbSpoiler-Black;
     text-align: center;
     margin-top: -10%;
   }
