@@ -1,31 +1,18 @@
-
-
 $(document).ready(function() {
-    
-  // use custom form box style
-    $('#options').select2({
-    });
-    
-    // Hide the sidebar initially
-    $('#hiddeSidebar').hide();
-    // Set the initial left position of #sideIcon to 0
-    $('#sideIcon').css('left', '0');
-    $('#sideIcon').click(function() {
-      $('#hiddeSidebar').toggle();
-  
-      var sidebarVisible = $('#hiddeSidebar').is(':visible');
-      $('#sideIcon').css('left', sidebarVisible ? '300px' : '0');
+  // Set the initial left position of #sideIcon to 0
+  $('#svg-accessiblity').css('left', '0');
+  $('#svg-accessiblity').click(function() {
+    $('#hiddenSidebar').toggle();
+  });
+
+  $('#crossIcon').click(function() {
+      // Hide the sidebar when clicking the crossIcon
+      $('#hiddenSidebar').hide();
+      // Reset the left position of #sideIcon to 0
+      $('#svg-accessiblity').css('left', '0');
     });
 
-    $('#crossIcon').click(function() {
-        // Hide the sidebar when clicking the crossIcon
-        $('#hiddeSidebar').hide();
-        // Reset the left position of #sideIcon to 0
-        $('#sideIcon').css('left', '0');
-      });
 
-
-      // acessbility
     var clickCount = 0;
   
     $('#zoomButton').click(function() {
