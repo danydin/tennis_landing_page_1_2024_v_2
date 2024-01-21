@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel='icon' href='./images/logo.png'>
     <title>מרכזי הטניס והחינוך בישראל - דף נחיתה 2024</title>
-    <link rel="stylesheet" href="style.css?=v1.4" />
+    <link rel="stylesheet" href="style.css?=v1.5" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
 </head>
-  <body dir="">
+  <body>
     <div class="container">
 
       <div class="sidebar">
@@ -119,27 +119,31 @@
                         <span class="icon icon-chev_down">⌄</span>
                       </div>
                       <ul id="scrollbar-inner" class="scrollbar-inner">
-                        <li onclick="selectOption(this)" data-value="אופקים" class="show">אופקים</li>
-                        <li onclick="selectOption(this)" data-value="אשקלון" class="show">אשקלון</li>
-                        <li onclick="selectOption(this)" data-value="באר שבע" class="show">באר שבע</li>
-                        <li onclick="selectOption(this)" data-value="גדידה מכר" class="show">ג'דידה מכר (שלוחה)</li>
-                        <li onclick="selectOption(this)" data-value="גליל - סאגור" class="show">גליל - סאג'ור</li>
-                        <li onclick="selectOption(this)" data-value="דימונה" class="show">דימונה</li>
-                        <li onclick="selectOption(this)" data-value="חיפה" class="show">חיפה</li>
-                        <li onclick="selectOption(this)" data-value="טבריה" class="show">טבריה</li>
-                        <li onclick="selectOption(this)" data-value="יפו (וולפסון)" class="show">יפו (וולפסון)</li>
-                        <li onclick="selectOption(this)" data-value="יקנעם" class="show">יקנעם</li>
-                        <li onclick="selectOption(this)" data-value="ירושלים" class="show">ירושלים</li>
-                        <li onclick="selectOption(this)" data-value="מגדל העמק" class="show">מגדל העמק</li>
-                        <li onclick="selectOption(this)" data-value="נהריה" class="show">נהריה</li>
-                        <li onclick="selectOption(this)" data-value="עכו" class="show">עכו</li>
-                        <li onclick="selectOption(this)" data-value="ערד" class="show">ערד</li>
-                        <li onclick="selectOption(this)" data-value="קריית אונו" class="show">קריית אונו</li>
-                        <li onclick="selectOption(this)" data-value="קריית שמונה" class="show">קריית שמונה</li>
-                        <li onclick="selectOption(this)" data-value="רמת השרון" class="show">רמת השרון</li>
-                        <li onclick="selectOption(this)" data-value="תל אביב (יד אליהו)" class="show">
-                          תל אביב (יד אליהו)
-                        </li>
+                        <ul>
+                          <li onclick="selectOption(this)" data-center="12" >אופקים</li>
+                          <li onclick="selectOption(this)" data-center="8" >אשקלון</li>
+                          <li onclick="selectOption(this)" data-center="11" >באר שבע</li>
+                          <li onclick="selectOption(this)" data-center="44" >בוקעאתא</li>
+                          <li onclick="selectOption(this)" data-center="31" >ג'דידה מכר (שלוחה)</li>
+                          <li onclick="selectOption(this)" data-center="15" >גליל - סאג'ור</li>
+                          <li onclick="selectOption(this)" data-center="40" >דימונה</li>
+                          <li onclick="selectOption(this)" data-center="5" >חיפה</li>
+                          <li onclick="selectOption(this)" data-center="22" >חצור הגלילית</li>
+                          <li onclick="selectOption(this)" data-center="9" >טבריה</li>
+                          <li onclick="selectOption(this)" data-center="41" >טייבה</li>
+                          <li onclick="selectOption(this)" data-center="14" >יקנעם</li>
+                          <li onclick="selectOption(this)" data-center="7" >ירושלים</li>
+                          <li onclick="selectOption(this)" data-center="45" >מגדל העמק</li>
+                          <li onclick="selectOption(this)" data-center="42" >מסעדה</li>
+                          <li onclick="selectOption(this)" data-center="37" >נהריה</li>
+                          <li onclick="selectOption(this)" data-center="16" >עכו</li>
+                          <li onclick="selectOption(this)" data-center="6" >ערד</li>
+                          <li onclick="selectOption(this)" data-center="10" >קריית אונו</li>
+                          <li onclick="selectOption(this)" data-center="4" >קריית שמונה</li>
+                          <li onclick="selectOption(this)" data-center="2" >רמת השרון</li>
+                          <li onclick="selectOption(this)" data-center="13" >תל אביב (יד אליהו)</li>
+                        </ul>
+                        
                       </ul>
                     </div>
                   </div>
@@ -154,6 +158,7 @@
         <div dir="rtl" class="right" id="midRight">
           <p>
             החלה ההרשמה לבית הספר המקצועי לטניס
+            <br /> 
             <br /> 
             אימוני טניס לילדים בכל הרמות, בהדרכת המאמנים
             <br />
@@ -215,7 +220,6 @@
 
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
   <script src="script.js"></script>
   </body>
   </html>

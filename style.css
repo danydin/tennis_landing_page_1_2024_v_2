@@ -36,14 +36,13 @@
     width: 100%;
     background: url('./images/sky.webp') no-repeat center fixed;
     /* Set background size to cover the entire body */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-size: cover;
     /* Set background attachment to fixed for a fixed background */
     background-attachment: fixed;
     /* Add additional styles as needed */
     border: 7px solid white;
-
-    filter: grayscale(0); /* Set default value */
+    filter: grayscale(0);
   }
 
   body.grayscale {
@@ -130,7 +129,7 @@
   }
 
   .main-title h1 {
-    font-size: 11vw;
+    font-size: 140px;
     color: white;
     font-family: 'FbSpoiler-Black';
   }
@@ -143,14 +142,14 @@
   .right {
     display: flex;
     flex-direction: column;
-    flex: 1.5;
+    flex: 1.3;
     margin-bottom: 5px;
     width: 100%;
   }
   .right p{
       text-align: right;
       /* padding-right: 115px; */
-      font-size: 2.6vw;
+      font-size: 35px;
       font-family: FbSpoiler-bold;
   }
 
@@ -240,7 +239,6 @@
   select:hover{
     cursor: pointer;
   }
-
 
   input {
     font-size: 20px;
@@ -368,20 +366,6 @@
     font-family: FbSpoiler-Bold;
   }
 
-  .gift-desc{
-    font-size: 4vw;
-    font-family: FbSpoiler-Black;
-    text-align: center;
-    margin-top: -10%;
-  }
-
-  .gift-desc-2{
-    text-align: center;
-    font-family: FbSpoiler-bold;
-    font-size: 2em;
-    margin-top: -3%;
-  }
-
   .container hr {
     color: white;
     height: 10px;
@@ -391,6 +375,7 @@
     margin-top: -15px;
   }
 
+/* 
   #select2-options-container{
     padding: 0;
     color: var(--primary-color);
@@ -402,7 +387,8 @@
     border: none !important;
     background: none !important;
   } 
-  
+   */
+
   .footer {
     background-color: rgb(78, 163, 78);
     display: flex;
@@ -530,9 +516,24 @@
 
   .gifth2{
     color: var(--primary-color);
-    font-size:  9vw;
+    font-size:  100px;
     font-family: FbSpoiler-Black;
     text-align: center;
+  }
+
+
+  .gift-desc{
+    font-size: 50px;
+    font-family: FbSpoiler-Black;
+    text-align: center;
+    margin-top: -10%;
+  }
+
+  .gift-desc-2{
+    text-align: center;
+    font-family: FbSpoiler-bold;
+    font-size: 2em;
+    margin-top: -3%;
   }
 
   .gifth2-mobile, .gift-desc-mobile{
@@ -548,7 +549,7 @@
   }
 
   .footer-left, .footer-right{
-    flex:1;
+    flex: 1;
     justify-content: flex-start;
   }
 

@@ -88,7 +88,7 @@ let isShowError = false;
 const input_1 = document.getElementById("input_1");
 const input_2 = document.getElementById("input_2");
 const input_3 = document.getElementById("input_3");
-const selectedValue = input_3.getAttribute("data-value");
+const selectedValue = input_3.getAttribute("data-center");
 const tooltip_1 = document.getElementById("tooltip_1");
 const tooltip_2 = document.getElementById("tooltip_2");
 const tooltip_3 = document.getElementById("tooltip_3");
@@ -110,25 +110,38 @@ const handleSubmit = (event) => {
     input_2.value.match(/^05\d{8}$/) &&
     selectInput.getAttribute("data-value")
   ) {
-    const url = "https://danydin.github.io/landpage_23/ajax-contact.php";
-    const data = {
-      fullname: input_1.value,
-      phone: input_2.value,
-      branch: selectInput.getAttribute("data-value"),
+      var dataLeadArray = {
+      'access_key': process.env.API_KEY,
+      'name': input_1.value,
+      'phone': input_2.value,
+      'email': '',
+      'contact[unit_id]': selectInput.getAttribute("data-value"),
+      'contact[text_3]': 'דף נחיתה 2024',
+      'contact[lead_status_cat_id]': '1696'
     };
 
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams(data).toString(),
-    })
-      .then((response) => response.json())
-      .then((result) => console.log(result))
-      .catch((error) => console.error("Error:", error));
+var formData = new URLSearchParams();
+for (var key in dataLeadArray) {
+  formData.append(key, dataLeadArray[key]);
+}
+
+fetch('https://center.tennis.org.il/contacts/lead_form1', {
+  method: 'POST',
+  body: formData,
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+})
+  .then(()=>window.location.href = 'thanks.html')
+  .catch(error => {
+    // Handle errors here
+    console.log(error)
+    window.location.href = 'thanks.html';
+  });
+
   }
 };
+
 const handleChange = () => {
   tooltip_2.style.visibility =
     input_2.value.trim() === "" ? "visible" : "hidden";
@@ -154,9 +167,9 @@ const toggleDropdown = () => {
 };
 
 function selectOption(option) {
-  const dataValue = option.getAttribute("data-value");
+  const dataValue = option.getAttribute("data-center");
   input_3.setAttribute("data-value", dataValue);
-  tooltip_3.style.visibility = selectedValue != "" ? "visible" : "hidden";
+  tooltip_3.style.visibility = selectedValue != "" ? "hidden" : "visible";
   input_3.innerText = option.innerText;
   toggleDropdown();
 }

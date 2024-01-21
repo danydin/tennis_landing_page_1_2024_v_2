@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  :root{
+    --primary-color: #014282;
+  }
+  @font-face {
+    font-family: AdobeFnt23;
+    src: url(./fonts/AdobeFnt23.lst);
+  }
+  @font-face {
+    font-family: AdobeFnt24;
+    src: url(./fonts/AdobeFnt24.lst);
+  }
+  @font-face {
+    font-family: balooTammudu2;
+    src: url(./fonts/BalooTammudu2-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: FbSpoiler-Black;
+    src: url(./fonts/FbSpoiler-Black.otf);
+  }
+  @font-face {
+    font-family: FbSpoiler-Bold;
+    src: url(./fonts/FbSpoiler-Bold.otf);
+  }
+  @font-face {
+    font-family: FbSpoiler-light;
+    src: url(./fonts/FbSpoiler-Light.otf);
+  }
+
+  body,html {
+    height: 100%;
+    width: 100%;
+    background: url('./images/sky.webp') no-repeat center fixed;
+    /* Set background size to cover the entire body */
+    /* overflow-x: hidden; */
+    background-size: cover;
+    /* Set background attachment to fixed for a fixed background */
+    background-attachment: fixed;
+    /* Add additional styles as needed */
+    border: 7px solid white;
+    filter: grayscale(0);
+  }
+
+  body.grayscale {
+    filter: grayscale(100%);
+  }
