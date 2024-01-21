@@ -154,8 +154,8 @@
   }
 
   .right .child-image img {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
   }
 
   .left {
@@ -189,7 +189,7 @@
 
   .form-title {
     color: var(--primary-color);
-    font-size: 1.6em;
+    font-size: 30px;
     text-align: center;
     font-family: FbSpoiler-bold;
     padding-top: 6px;
@@ -553,6 +553,10 @@
     margin-right: -10%;
   }
 
+  .container hr {
+    margin-top: -40px;
+  }
+
   .footer-left, .footer-right{
     flex: 1;
     justify-content: flex-start;
@@ -603,8 +607,7 @@
     }
     .main-title h1{
       text-align: center;
-      padding: 0px 10px;
-      /* font-size: 40px; */
+      font-size: 45px;
     } 
     
     .sub-mobile-container{
@@ -617,8 +620,7 @@
 
     .subtitle-mobile{
       color: var(--primary-color);
-      font-size: clamp(3vw,6vw,6vw);
-      /* margin-right: 10vw; */
+      font-size: 50px;
       font-family: FbSpoiler-bold;
     }
 
@@ -762,14 +764,16 @@
       .loc-center,.loc-south{
         line-height: 4vw;
       }
-
     }
 
-
-  @media only screen and (max-width: 535px){
-      .main-title h1{
-        font-size: 55px;
-        text-align: center;
-        padding: 0px 10px 30px;
-      }
-    }
+    @media only screen and ( max-width: 570px){
+          .main-title h1{
+            padding: 0px 10px 30px;
+          }
+          .subtitle-mobile{
+            font-size: 30px;
+          }
+          .form-title {
+            font-size: 20px;
+        }
+  
