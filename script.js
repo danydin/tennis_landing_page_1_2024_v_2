@@ -37,14 +37,6 @@ $(document).ready(function() {
         $('#section2').css('transform', 'scale(1.1)');
         $('#section3').css('transform', 'scale(1.1)');
       } else if (clickCount === 2) {
-        $('#section1').css('transform', 'scale(1.2)');
-        $('#section2').css('transform', 'scale(1.2)');
-        $('#section3').css('transform', 'scale(1.2)');
-      } else if (clickCount === 3) {
-        $('#section1').css('transform', 'scale(1.3)');
-        $('#section2').css('transform', 'scale(1.3)');
-        $('#section3').css('transform', 'scale(1.3)');
-      } else if (clickCount === 4) {
         // Fourth click, set scale back to normal (1)
         $('#section1').css('transform', 'scale(1)');
         $('#section2').css('transform', 'scale(1)');
@@ -118,11 +110,10 @@ const handleSubmit = (event) => {
   const selectInput = document.getElementById("input_3");
   tooltip_1.style.visibility =
     input_1.value.trim() === "" ? "visible" : "hidden";
-  tooltip_2.style.visibility = input_2.value.match(/^05\d{8}$/)
-    ? "hidden"
-    : "visible";
-  tooltip_3.style.visibility =
-    selectInput.getAttribute("data-value") == "" ? "visible" : "hidden";
+  tooltip_1.style.visibility == "hidden" ? tooltip_2.style.visibility = input_2.value.match(/^05\d{8}$/)
+    ? "hidden" : "visible" : "";
+  tooltip_1.style.visibility == "hidden" && tooltip_2.style.visibility == "hidden"? tooltip_3.style.visibility =
+    selectInput.getAttribute("data-value") == "" ? "visible" : "hidden" : "";
   isShowError = true;
 
   if (
