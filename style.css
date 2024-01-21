@@ -483,7 +483,8 @@
 
 .animate_opacity {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(-300px);
+
   transition: opacity 0.9s, transform 0.9s;
 }
 
