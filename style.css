@@ -501,6 +501,10 @@
     display: none;
 }
 
+  .left-contents{
+    margin-top: -30px;
+  }
+
   .circle-gift-mobile{
     display: none;
   }
