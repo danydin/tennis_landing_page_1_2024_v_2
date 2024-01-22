@@ -1,3 +1,7 @@
+<!-- 
+  1. add hr to each input via js or change form to select option as in page 50
+  2. fix thank you page
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +9,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel='icon' href='./images/logo.png'>
     <title>מרכזי הטניס והחינוך בישראל - דף נחיתה 2024</title>
-    <link rel="stylesheet" href="style.css?=v1.8" />
+    <link rel="stylesheet" href="style.css?=v1.9" />
 </head>
   <body>
     <div class="container">
@@ -57,18 +61,20 @@
       <div id="section2" class="midSection">
         <div dir="rtl" class="left" id="midLeft">
           <div class="left-contents">
-            <div dir="rtl" class="sub-mobile-container">
-              <p class="subtitle-mobile">החלה ההרשמה 
+
+            <div dir="rtl" class="subtitle-mobile-container">
+              <p class="form-title mobile">החלה ההרשמה 
                 <br />
                  לבית הספר
                  <br />
                   המקצועי לטניס</p>
-              <div dir="rtl" class="gift-desktop">
-                <h2 class="gifth2">מתנה</h2>
-                <p class="gift-desc">לכל נרשם/ת!</p>
-                <p class="gift-desc-2" >מחבט + תיק + חולצה</p>
-                <p id="terms-gift">*המבצע עד גמר המלאי</p>
-              </div>
+            </div>
+
+            <div dir="rtl" class="gift-desktop">
+              <h2 class="gifth2">מתנה</h2>
+              <p class="gift-desc">לכל נרשם/ת!</p>
+              <p class="gift-desc-2" >מחבט + תיק + חולצה</p>
+              <p id="terms-gift">*המבצע עד גמר המלאי</p>
             </div>
 
             <div class="form-circle-container">
@@ -103,7 +109,7 @@
                       name="phone"
                       id="phone"
                       title="נא להכניס מספר טלפון תקין"
-                      placeholder="מספר טלפון נייד"
+                      placeholder="מספר טלפון"
                       dir="rtl"
                       required=""
                     />
