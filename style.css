@@ -41,6 +41,7 @@
   }
 
   body.grayscale {
+    /* accesbility */
     filter: grayscale(100%);
   }
 
