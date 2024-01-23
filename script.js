@@ -78,7 +78,6 @@ var colorButton = document.getElementById("changeColorBtn");
 
 
     $('#backColorChange').click(function() {
-        // Toggle the 'highlight' class for sections 1, 2, and 3
         $('#section1, #midRight, #section3').toggleClass('bg-color');
         $('#midLeft, #section3').toggleClass('bg-color2');
       });
@@ -88,7 +87,6 @@ let isShowError = false;
 const input_1 = document.getElementById("input_1");
 const input_2 = document.getElementById("input_2");
 const input_3 = document.getElementById("input_3");
-const selectedValue = input_3.getAttribute("data-center");
 const tooltip_1 = document.getElementById("tooltip_1");
 const tooltip_2 = document.getElementById("tooltip_2");
 const tooltip_3 = document.getElementById("tooltip_3");
@@ -96,26 +94,25 @@ const tooltip_3 = document.getElementById("tooltip_3");
 const numberValidataion = () => {};
 const handleSubmit = (event) => {
   event.preventDefault();
-  const selectInput = document.getElementById("input_3");
   tooltip_1.style.visibility =
     input_1.value.trim() === "" ? "visible" : "hidden";
   tooltip_1.style.visibility == "hidden" ? tooltip_2.style.visibility = input_2.value.match(/^05\d{8}$/)
     ? "hidden" : "visible" : "";
-  tooltip_1.style.visibility == "hidden" && tooltip_2.style.visibility == "hidden"? tooltip_3.style.visibility =
-    selectInput.getAttribute("data-value") == "" ? "visible" : "hidden" : "";
+  (tooltip_1.style.visibility == "hidden" && tooltip_2.style.visibility == "hidden") ?
+  tooltip_3.style.visibility = input_3.value == "" ? "visible" : "hidden" : "";
   isShowError = true;
 
   if (
     input_1.value &&
     input_2.value.match(/^05\d{8}$/) &&
-    selectInput.getAttribute("data-value")
+    input_3.value
   ) {
       var dataLeadArray = {
       'access_key': process.env.API_KEY,
       'name': input_1.value,
       'phone': input_2.value,
       'email': '',
-      'contact[unit_id]': selectInput.getAttribute("data-value"),
+      'contact[unit_id]': input_3.value,
       'contact[text_3]': 'דף נחיתה 2024',
       'contact[lead_status_cat_id]': '1696'
     };
@@ -143,6 +140,7 @@ fetch('https://center.tennis.org.il/contacts/lead_form1', {
 };
 
 const handleChange = () => {
+  // console.log(input_3.value)
   tooltip_2.style.visibility =
     input_2.value.trim() === "" ? "visible" : "hidden";
   if (!input_2.value.match(/^05\d{8}$/) && input_2.value != "") {
@@ -158,20 +156,15 @@ const handleChange = () => {
   }
 };
 
-const toggleDropdown = () => {
-  var dropdown = document.getElementById("scrollbar-inner");
-  var btn = document.getElementById("btn");
-  dropdown.style.visibility =
-    dropdown.style.visibility === "visible" ? "hidden" : "visible";
-  btn.style.zIndex = dropdown.style.visibility === "hidden" ? "100" : "0";
-};
-
-function selectOption(option) {
-  const dataValue = option.getAttribute("data-center");
-  input_3.setAttribute("data-value", dataValue);
-  tooltip_3.style.visibility = selectedValue != "" ? "hidden" : "visible";
-  input_3.innerText = option.innerText;
-  toggleDropdown();
-}
+// for select2 jquery
+$(document).ready(function () {
+  $("#input_3").select2({
+    placeholder: "בחירת מרכז",
+    // allowClear: true,
+  });
+  $("#input_3").on("change", function () {
+    handleChange();
+  });
+});
 
 
