@@ -6,18 +6,7 @@
   :root{
     --primary-color: #014282;
   }
-  @font-face {
-    font-family: AdobeFnt23;
-    src: url(./fonts/AdobeFnt23.lst);
-  }
-  @font-face {
-    font-family: AdobeFnt24;
-    src: url(./fonts/AdobeFnt24.lst);
-  }
-  @font-face {
-    font-family: balooTammudu2;
-    src: url(./fonts/BalooTammudu2-SemiBold.ttf);
-  }
+  
   @font-face {
     font-family: FbSpoiler-Black;
     src: url(./fonts/FbSpoiler-Black.otf);
@@ -25,10 +14,6 @@
   @font-face {
     font-family: FbSpoiler-Bold;
     src: url(./fonts/FbSpoiler-Bold.otf);
-  }
-  @font-face {
-    font-family: FbSpoiler-light;
-    src: url(./fonts/FbSpoiler-Light.otf);
   }
 
   body,html {
