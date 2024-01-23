@@ -107,8 +107,11 @@ const handleSubmit = (event) => {
     input_2.value.match(/^05\d{8}$/) &&
     input_3.value
   ) {
+      $('.btn').prop('disabled', true);
+      $('.btn').css('background-color', 'grey');
+
       var dataLeadArray = {
-      'access_key': process.env.API_KEY,
+      'access_key': 'blabla',
       'name': input_1.value,
       'phone': input_2.value,
       'email': '',
