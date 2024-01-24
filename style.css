@@ -134,11 +134,6 @@
       font-family: FbSpoiler-bold;
   }
 
-  .right .child-image img {
-    width: 95%;
-    height: 95%;
-  }
-
   .left {
     flex: 1;
   }
@@ -196,7 +191,6 @@
       border: none;
       outline: none;
       color: var(--primary-color);
-      font-size: 18px;
       font-weight: bold;
   }
 
@@ -213,7 +207,7 @@
     border: none;
     background: transparent;
     font-family: FbSpoiler-Bold;
-    font-size: 20px;
+    font-size: 25px;
     height: 35px;
     color: #014282;
     border: none;
@@ -282,7 +276,7 @@
     border-bottom: 1px solid #fff;
     background: transparent !important;
     color: #014282;
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'FbSpoiler-Bold';
   }
 
@@ -366,7 +360,6 @@
   }
   .fRight p {
     font-family: FbSpoiler-Black;
-    font-size: 1.2em;
   }
 
   .footer-contact__tel {
@@ -447,7 +440,6 @@
     display: none;
   }
   
-
   #terms-gift{
     font-family:"FbSpoiler-bold";
     text-align: center;
@@ -479,13 +471,29 @@
   .gifth2-mobile, .gift-desc-mobile{
     display: none;
   }
-  
-  .right .child-image {
-    margin-right: -10%;
+
+  .card{
+    width: 50%
   }
 
+  /* .right .child-image {
+  } */
+
+  .right .child-image img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
   .container hr {
     margin-top: -40px;
+  }
+
+  .fRight p {
+    font-family: FbSpoiler-Black;
+    font-size: 30px;
+  }
+
+  .fMid-desktop {
+    font-size: 20px;
   }
 
   .footer-left, .footer-right{
@@ -495,6 +503,7 @@
 
   .footer-left{
     justify-content: space-between;
+    font-size: 20px;
   }
 
   .f-fb {
@@ -675,13 +684,11 @@
       }
 
       .child-image{
-        display: flex;
         justify-content: center;
-        margin-bottom: 5px;
-        width: 120%;
+        margin-left: 20px;
       }
       .child-image img{
-        margin-left: 15%;
+        width: 110%;
       }
 
       .loc-center,.loc-south{

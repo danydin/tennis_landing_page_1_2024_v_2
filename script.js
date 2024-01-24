@@ -111,7 +111,7 @@ const handleSubmit = (event) => {
       $('.btn').css('background-color', 'grey');
 
       var dataLeadArray = {
-      'access_key': 'blabla',
+      'access_key': '',
       'name': input_1.value,
       'phone': input_2.value,
       'email': '',
