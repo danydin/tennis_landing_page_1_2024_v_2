@@ -184,6 +184,7 @@
 
   button:hover{
     cursor: pointer;
+    background: #1d2fff;
   }
 
   select{
