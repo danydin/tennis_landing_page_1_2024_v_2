@@ -125,7 +125,7 @@ for (var key in dataLeadArray) {
   formData.append(key, dataLeadArray[key]);
 }
 
-fetch('https://center.tennis.org.il/contacts/lead_form1', {
+fetch('URL', {
   method: 'POST',
   body: formData,
   headers: {
