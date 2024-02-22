@@ -625,15 +625,14 @@ input::placeholder {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     background-color: var(--primary-color);
-    /* padding: 10% 5%; */
-    /* margin: 10% 0; */
+    padding: 10% 5%;
+    margin: 10% 0;
     border-radius: 50%;
     border: 4px solid #00a1e3;
     transform: rotate(-10deg);
-    /* margin-top: 49px; */
     z-index: 5;
     font-family: FbSpoiler-bold
   }
