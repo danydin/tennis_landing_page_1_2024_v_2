@@ -590,7 +590,7 @@ input::placeholder {
   }
 
   .subtitle-mobile-container {
-    width: 100%;
+    width: 60%;
   }
 
   .mobile-desc{
@@ -728,5 +728,11 @@ input::placeholder {
   .loc-center,
   .loc-south {
     line-height: 4vw;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .mobile-desc{
+    display: flex;
   }
 }
