@@ -576,7 +576,7 @@ input::placeholder {
     font-size: 36px;
     padding: 0px 10px 30px;
   }
-  
+
   .form-title {
     font-size: 20px;
   }
@@ -593,7 +593,7 @@ input::placeholder {
     width: 60%;
   }
 
-  .mobile-desc{
+  .mobile-desc {
     color: var(--primary-color);
     font-size: 20px;
     text-align: center;
@@ -731,8 +731,8 @@ input::placeholder {
   }
 }
 
-@media only screen and (max-width: 700px){
-  .mobile-desc{
+@media only screen and (max-width: 700px) {
+  .mobile-desc {
     display: flex;
   }
 }
