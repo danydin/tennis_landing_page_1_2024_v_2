@@ -22,8 +22,6 @@ body {
   background: url('./images/sky.webp') no-repeat center fixed;
   background-size: 100% 100%;
   border: 10px solid white;
-  height: 100%;
-
 }
 
 body.grayscale {
@@ -34,9 +32,6 @@ body.grayscale {
 .container {
   color: white;
   width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 #svg-accessiblity {
@@ -54,8 +49,7 @@ body.grayscale {
 .sidebar {
   color: black;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 2%;
   font-size: 45px;
   z-index: 3;
   background-color: rgb(249 245 245);
@@ -117,19 +111,17 @@ body.grayscale {
 }
 
 .main-title h1 {
-  font-size: 90px;
+  font-size: 100px;
   color: white;
   font-family: 'FbSpoiler-Black';
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 35px;
 }
 
 .midSection {
   display: flex;
   justify-content: space-around;
   padding: 0 5%;
-  height: 29rem;
-  width: 100%;
 }
 
 .right {
@@ -143,7 +135,7 @@ body.grayscale {
 .right p {
   text-align: right;
   /* padding-right: 115px; */
-  font-size: 26px;
+  font-size: 35px;
   font-family: FbSpoiler-bold;
 }
 
@@ -165,11 +157,11 @@ body.grayscale {
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px ); */
   border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 10px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  row-gap: 11px;
+  row-gap: 15px;
   margin-top: 15px;
   z-index: 3;
 }
@@ -342,7 +334,6 @@ input::placeholder {
   align-items: center;
   justify-content: space-between;
   padding: 10px 25px;
-  flex-grow: 1;
 }
 
 .footer-left {
@@ -478,14 +469,14 @@ input::placeholder {
 
   .gifth2 {
     color: var(--primary-color);
-    font-size: 80px;
+    font-size: 100px;
     font-family: FbSpoiler-Black;
     text-align: center;
   }
 
 
   .gift-desc {
-    font-size: 45px;
+    font-size: 50px;
     font-family: FbSpoiler-Black;
     text-align: center;
     margin-top: -15px;
@@ -513,7 +504,6 @@ input::placeholder {
   .right .child-image img {
     width: 100%;
     margin-bottom: 20px;
-    height: 22rem;
   }
 
   .container hr {
@@ -560,12 +550,6 @@ input::placeholder {
 }
 
 @media only screen and (max-width: 1140px) {
-  .card{
-    padding: 35px 25px;
-  }
-    .midSection{
-      height: auto;
-    }
   #mobile-logo {
     width: 15vw;
     height: 15vw;
@@ -738,8 +722,7 @@ input::placeholder {
   }
 
   .child-image img {
-    width: 100%;
-    height: 100%;
+    width: 110%;
   }
 
   .loc-center,
